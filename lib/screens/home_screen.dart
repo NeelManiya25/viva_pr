@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:viva_pr/model/quotes.dart';
-import 'package:viva_pr/services/api.dart';
+import 'package:viva_pr/screens/api.dart';
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -72,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '${data?.content ?? "Don't talk about what you have done or what you are going to do."}',
+                        '${data?.text?? "Don't talk about what you have done or what you are going to do."}',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 20,

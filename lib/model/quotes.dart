@@ -9,26 +9,26 @@ String quotesToJson(Quotes data) => json.encode(data.toJson());
 class Quotes {
   Quotes({
 
-     this.content = '',
+     this.text = '',
     this.author = '',
 
   });
 
 
-  String content;
+  String text;
   String author;
 
 
   factory Quotes.fromJson(Map<String, dynamic> json) => Quotes(
 
-        content: json["content"],
+        text: json["text"],
         author: json["author"],
 
       );
 
   Map<String, dynamic> toJson() => {
 
-        "content": content,
+        "text": text,
         "author": author,
 
       };
