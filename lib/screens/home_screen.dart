@@ -34,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             iconSize: 30,
             onPressed: () {
-              print("icon refresh");
               getQuotes();
             },
           ),
@@ -44,17 +43,6 @@ class _HomeScreenState extends State<HomeScreen> {
         onRefresh: getQuotes,
         child: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Text(
-                "Pull to Refresh",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
             Container(
               padding: EdgeInsets.symmetric(
                 horizontal: 10,
@@ -62,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
               width: width / 2,
               child: Card(
                 margin: EdgeInsets.only(top: 20),
-                color: Color(0XFFeeeeee),
+                color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
